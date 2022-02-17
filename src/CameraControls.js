@@ -20,7 +20,7 @@ const CameraControls = () =>{
       <orbitControls 
       ref={controls} 
       args={[camera, domElement]}
-      attach='orbitControls'
+      attach='orbitControls' /*this creates a cleaner way to see the enabled property in the console under the scene object*/
       />
     )
   }

@@ -14,7 +14,7 @@ const Floor = (/*{position}*/props)=>{
     return (
       <mesh {...props} receiveShadow/*={props.receiveShadow}*/>
       <boxBufferGeometry args={[20,1,10]} />{/*Don't forget the s on arg*/}
-      <meshPhysicalMaterial color="white"/**//>
+      <meshPhysicalMaterial color="white"/>
       </mesh>
       
     )

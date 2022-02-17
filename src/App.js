@@ -106,13 +106,15 @@ const App = ()=>{
 
             
 
-            <Background />{/**/}
+            
 
 
           </Suspense>
         </Dragable>
-
-
+        <Suspense fallback={null}>
+          <Background />{/**/}
+        </Suspense>
+        
         <Floor position={[0, -0.5, 0]} /> {/**/}
 
 

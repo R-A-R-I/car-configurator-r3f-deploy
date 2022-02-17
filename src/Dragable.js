@@ -21,8 +21,13 @@ const Dragable = (props)=>{
     useEffect(()=>{
         controlsRef.current.addEventListener("hoveron", (e)=>{
             console.log(scene)
-
+            scene.orbitControls.enabled = false
         })// the addEventListener can be found in the parents classes' documentation on threejs
+
+        controlsRef.current.addEventListener("hoveroff", (e)=>{
+            console.log(scene)
+            scene.orbitControls.enabled = true
+        })
     
     },[children])// another useEffect was used to only be called when the children have changed
 

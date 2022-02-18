@@ -6,14 +6,14 @@ import * as Three from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
 //import { DirectionalLightHelper } from "three";
 //import {useHelper} from "@react-three/drei";
-
+import {useBox} from 'use-cannon'
 
 
 const Box = props=>{
 
+    const [ref,api] = useBox(()=>({mass:1, ...props}))// ref replaces old one
     const cubeTexture = useLoader(Three.TextureLoader,'/wood.jpg')//
   
-    const ref = useRef();// ref is passed to the useFrame and the logic is passed to mesh
     
     useFrame(()=>{
       ref.current.rotation.x += 0.01
@@ -26,7 +26,9 @@ const Box = props=>{
       {/*<div>
         //DOm elements are not rendered in canvas so text and div wont work 
       </div>*/}
-      <mesh ref={ref} {...props}/*spread attribute*/  
+      <mesh
+      ref={ref} 
+      {...props}/*spread attribute*/  
       castShadow/*={props.castShadow} */ 
       receiveShadow /*</>={props.receiveShadow}*/ 
       >{/* Remember that the mesh stores the material and geometry */}

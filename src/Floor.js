@@ -4,11 +4,12 @@ import React, {useRef, Suspense, useState } from 'react';
 import {Canvas, useFrame, useThree, extend, useLoader} from '@react-three/fiber';
 import * as Three from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
-//import { DirectionalLightHelper } from "three";
+//import { DirectionalLightHelper } from "thre
+import { useBox} from 'use-cannon'
 //import {useHelper} from "@react-three/drei";
 
 const Floor = (/*{position}*/props)=>{
-
+    const [ref,api] = useBox({...props})
 
     console.log("floor is here")
     return (

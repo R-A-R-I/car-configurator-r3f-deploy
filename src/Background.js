@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useRef, Suspense, useState } from 'react';
+import React, {useRef, Suspense, useState, useMemo } from 'react';
 import {Canvas, useFrame, useThree, extend, useLoader} from '@react-three/fiber';
 import * as Three from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
@@ -19,8 +19,12 @@ const Background = ()=>{
     //this method is so that you can get the texture 
     
     /***Alternative to the above */
-    skybox.encoding = Three.sRGBEncoding;
-    skybox.mapping = Three.EquirectangularReflectionMapping;
+
+    useMemo(()=>{
+      skybox.encoding = Three.sRGBEncoding;
+      skybox.mapping = Three.EquirectangularReflectionMapping;
+    },[])
+    
     
     return (
       <primitive /*attach="background" attach binds to parent*/ 

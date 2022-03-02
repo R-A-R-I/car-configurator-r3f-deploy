@@ -28,6 +28,26 @@ const Dragable = (props)=>{
             console.log(scene)
             scene.orbitControls.enabled = true
         })
+
+        controlsRef.current.addEventListener("dragstart", (e)=>{
+        
+            e.object.api.mass.set(0)
+        })
+
+        controlsRef.current.addEventListener("dragend", (e)=>{
+        
+            e.object.api.mass.set(1)
+        })
+
+
+        controlsRef.current.addEventListener("drag", (e)=>{
+            
+            console.log(e.object)// your familiar with e.object from previous projects. It is common when reading the properties of an element when an event has occured on it
+            //You will also notice that the api that you added to the box as an attribute can now be found through e.object
+            e.object.api.position.copy(e.object.position)
+            e.object.api.velocity.set(0,0,0)
+        })
+    
     
     },[children])// another useEffect was used to only be called when the children have changed
 

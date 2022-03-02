@@ -9,7 +9,7 @@ import { useBox} from '@react-three/cannon'
 //import {useHelper} from "@react-three/drei";
 
 const Floor = (/*{position}*/props)=>{
-    const [ref,api] = useBox(()=>({args:[20,1,10],...props}))
+    const [ref,api] = useBox(()=>({args:[20,1,10],...props}))// by default the floor is 1x1x1 so you have to give it dimensions with an args property 
 
     console.log("floor is here")
     return (

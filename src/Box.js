@@ -16,11 +16,6 @@ const Box = props=>{
   
     //const ref = useRef()
 
-    useFrame(()=>{
-      ref.current.rotation.x += 0.01
-      ref.current.rotation.y += 0.01
-    });/**/
-   // useFrame
 
    const onPointerDownHandler = (e) => {
 

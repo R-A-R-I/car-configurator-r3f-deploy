@@ -16,6 +16,7 @@ import ColorSelector from './ColorSelector';
 import Dragable from './Dragable';
 import {Physics} from '@react-three/cannon'
 import Model from './Model';
+import BoundingBox from './BoundingBox';
 
 //const [cubeTexture] = useLoader(TextureLoader,['wood.jpg']) Remember react hooks cannot be used at the top level. But the ideas is that you would destructure to obtain multiple textures at once if you wanted
 
@@ -62,6 +63,14 @@ const App = ()=>{
                 position={[4,0.6,0]}
               />
 
+            </Suspense>
+
+          </Dragable>
+          
+          <Dragable>
+            <Suspense 
+              fallback={null} 
+            >
               <Model 
                 path='/tesla_model_s/scene.gltf'/*Remember we are dealing with folders here so you have to use slashes at the beginning and slashes for sub folders */
                 scale={new Array(3).fill(0.012)} // or you could have done this [0.01,0.01,0.01]
@@ -69,7 +78,6 @@ const App = ()=>{
               />
 
             </Suspense>
-
           </Dragable>
 
           <Suspense fallback={null}>

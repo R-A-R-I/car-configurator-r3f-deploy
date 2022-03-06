@@ -45,8 +45,8 @@ const Dragable = (props)=>{
             console.log(e.object)// your familiar with e.object from previous projects. It is common when reading the properties of an element when an event has occured on it
             //You will also notice that the api that you added to the box as an attribute can now be found through e.object
 
-            e.object.api.position.copy(e.object.position)// copy takes an object with x,y,z properties
-            e.object.api.velocity.set(0,0,0)// set takes commas seperated values of x,y,z
+            e.object.api?.position.copy(e.object.position)// copy takes an object with x,y,z properties
+            e.object.api?.velocity.set(0,0,0)// set takes commas seperated values of x,y,z
         })
     
     
@@ -60,6 +60,7 @@ const Dragable = (props)=>{
         {/***1st step*/}
         {/*The has a camera and render properties in the constructor as specified by the three.js docs*/}
         <dragControls 
+        transformGroup
         ref={controlsRef}
         args={[children, camera, gl.domElement]}
         />{/*the object here starts with a capital even though it is a capital in threejs docs in r3f use common initial letter*/}

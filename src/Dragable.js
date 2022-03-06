@@ -31,12 +31,12 @@ const Dragable = (props)=>{
 
         controlsRef.current.addEventListener("dragstart", (e)=>{
         
-            e.object.api.mass.set(0)
+            e.object.api?.mass.set(0)
         })
 
         controlsRef.current.addEventListener("dragend", (e)=>{
         
-            e.object.api.mass.set(1)
+            e.object.api?.mass.set(1)
         })
 
 
@@ -44,8 +44,9 @@ const Dragable = (props)=>{
             
             console.log(e.object)// your familiar with e.object from previous projects. It is common when reading the properties of an element when an event has occured on it
             //You will also notice that the api that you added to the box as an attribute can now be found through e.object
-            e.object.api.position.copy(e.object.position)
-            e.object.api.velocity.set(0,0,0)
+
+            e.object.api.position.copy(e.object.position)// copy takes an object with x,y,z properties
+            e.object.api.velocity.set(0,0,0)// set takes commas seperated values of x,y,z
         })
     
     
@@ -62,7 +63,7 @@ const Dragable = (props)=>{
         ref={controlsRef}
         args={[children, camera, gl.domElement]}
         />{/*the object here starts with a capital even though it is a capital in threejs docs in r3f use common initial letter*/}
-        {props.children}{/*This is like foreshadowing and putting in place the infrasture to work with the child elements when they come. I guess like a mother setting up a baby room*/}
+        {props.children}{/*This is like foreshadowing and putting in place the infrasture to work with the child elements when they come. I guess like a mother setting up a baby room. And as you can see this infrastructure comes from the ref attribute*/}
         </group>
     )
 

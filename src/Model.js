@@ -11,9 +11,10 @@ const gltf = useLoader(GLTFLoader, props.path) // you are not using textures so 
 console.log(gltf)
 
 return(
-    <primitive object={gltf.scene}
-    {...props}
-    />//this is how we add the model scene that you found on the gltf object via console.log 
+    <primitive 
+    object={gltf.scene}//this is how we add the model scene that you found on the gltf object via console.log
+    scale={props.scale}
+    /> 
 )
 
 }

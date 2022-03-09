@@ -5,7 +5,7 @@ import { useFrame, useThree, extend} from '@react-three/fiber';
 
 extend({OrbitControls})
 
-const CameraControls = () =>{
+const Orbit = () =>{
 
     
   
@@ -25,4 +25,4 @@ const CameraControls = () =>{
     )
   }
 
-  export default CameraControls;
+  export default Orbit;

@@ -7,7 +7,7 @@ import * as Three from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
 //import { DirectionalLightHelper } from "three";
 //import {useHelper} from "@react-three/drei";
-import CameraControls from './CameraControls';
+import Orbit from './Orbit';
 import Floor from './Floor';
 import Bulb from './Bulb';
 import Box from './Box';
@@ -99,7 +99,7 @@ const App = ()=>{
         
         
 
-        <CameraControls />{/**/}
+        <Orbit />{/**/}
         
         <ambientLight intensity={0.2} />
         {/*<cameraHelper /*args={}/>*/}

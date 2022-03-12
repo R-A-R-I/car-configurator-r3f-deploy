@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useRef, Suspense, useState } from 'react';
 import {Canvas, useFrame, useThree, extend, useLoader} from '@react-three/fiber';
-import * as Three from "three";
+import * as THREE from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
 //import { DirectionalLightHelper } from "three";
 //import {useHelper} from "@react-three/drei";

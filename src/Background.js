@@ -1,14 +1,14 @@
 import './App.css';
 import React, {useRef, Suspense, useState, useMemo } from 'react';
 import {Canvas, useFrame, useThree, extend, useLoader} from '@react-three/fiber';
-import * as Three from "three";
+import * as THREE from "three";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
 //import { DirectionalLightHelper } from "three";
 //import {useHelper} from "@react-three/drei";
 
 
 const Background = ()=>{
-    const skybox = useLoader(Three.TextureLoader,'/autoshop.jpg')/*/sky.jpg*/
+    const skybox = useLoader(THREE.TextureLoader,'/autoshop.jpg')/*/sky.jpg*/
     
     const {gl} = useThree()
     
@@ -21,8 +21,8 @@ const Background = ()=>{
     /***Alternative to the above */
 
     useMemo(()=>{
-      skybox.encoding = Three.sRGBEncoding;
-      skybox.mapping = Three.EquirectangularReflectionMapping;
+      skybox.encoding = THREE.sRGBEncoding;
+      skybox.mapping = THREE.EquirectangularReflectionMapping;
     },[])
     
     

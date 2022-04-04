@@ -19,6 +19,8 @@ import Model from './Model';
 import BoundingBox from './BoundingBox';
 import Cars from './Cars';
 import CameraControls from './CameraControls';
+import CameraButtons from './CameraButtons';
+
 
 //const [cubeTexture] = useLoader(TextureLoader,['wood.jpg']) Remember react hooks cannot be used at the top level. But the ideas is that you would destructure to obtain multiple textures at once if you wanted
 
@@ -27,6 +29,10 @@ const App = ()=>{
   useHelper(dlref,DirectionalLightHelper,1)*/
 
   const [active, setActive] = useState(false);
+
+ 
+
+  //const [] =useSate([])
 
   /*const onPointerUpHandler = (e)=>{
  
@@ -41,7 +47,9 @@ const App = ()=>{
     <div style={{ height: '100vh', width: '100vw' }}>
 
       <ColorSelector />{/**/}
-
+      
+      <CameraButtons/>
+      
       {/***You got shadows to work by upgrading your package from the deprecated version*/}
       <Canvas style={{ backgroundColor: 'black' }} camera={{ position: [7, 7, 7] }} shadows /*Boolean attribute by default sets to true. My theory is that it sets it after you */>
         <axesHelper arg={[5]} />
@@ -60,6 +68,7 @@ const App = ()=>{
           <Bulb position={[0, 3, 0]} />{/**/}
 
         </Physics>
+        
         
         
         <CameraControls/>

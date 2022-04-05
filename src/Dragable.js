@@ -9,7 +9,7 @@ const Dragable = (props)=>{
     const groupRef = useRef()
     const controlsRef = useRef()
     const [children, setChildren] = useState([])
-    const {gl,camera,scene} = useThree() // scene was imported because you can find the orbitcontrol property there
+    const {gl,camera,scene} = useThree() // scene was imported[pulled] because you can find the orbitcontrol property there
 
     useEffect(()=>{
 

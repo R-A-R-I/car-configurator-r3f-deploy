@@ -56,20 +56,20 @@ const App = ()=>{
         {/*Don't forget to added physics please, it is important step for use-cannon*/}
         <Physics>
           
-            
           <Cars/>
-
-          <Suspense fallback={null}>
-            <Background />{/**/}
-          </Suspense>
 
           <Floor position={[0, -0.5, 0]} /> {/**/}
 
-          <Bulb position={[0, 3, 0]} />{/**/}
-
+          
         </Physics>
-        
-        
+
+        <Bulb position={[-6, 3, 0]} />{/**/}
+        <Bulb position={[0, 3, 0]} />
+        <Bulb position={[6, 3, 0]} />
+
+        <Suspense fallback={null}>
+            <Background />{/**/}
+          </Suspense>
         
         <CameraControls/>
 

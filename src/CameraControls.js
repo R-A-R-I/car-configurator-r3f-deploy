@@ -40,6 +40,10 @@ const CameraControls = ({})=>{
 
             const diff = camera.position.clone().sub(vec.set(...state.cameraPos)).length()
 
+            state.activeMesh = scene.getObjectByName(state.activeMeshName)
+
+            console.log(state.activeMesh)
+
             if(diff<0.1){
                 state.shouldFocus = false
                 //scene.orbitControls.target = vec.set(0,0,0)

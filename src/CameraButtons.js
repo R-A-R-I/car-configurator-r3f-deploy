@@ -29,16 +29,18 @@ const style = {
 
 const CameraButtons = ()=>{
 
-
+    
     
     const sets ={
         1:{
             cameraPos: [6,3,5],
-            targetPos: [4,0,0]
+            targetPos: [4,0,0],
+            name:"Capot001_CAR_PAINT_0"
         },
         2:{
             cameraPos: [-2,3,5], 
-            targetPos: [-4,0,0]
+            targetPos: [-4,0,0],
+            name:"object005_bod_0"
         }
 
 
@@ -46,6 +48,8 @@ const CameraButtons = ()=>{
     }
 
     const vec = new THREE.Vector3()
+
+    //const obj = new THREE.Object3D()
 
     const handleClick = num=>{
 
@@ -58,6 +62,14 @@ const CameraButtons = ()=>{
         state.targetPos= sets[num].targetPos //dymically change the key with square
         console.log(state.targetPos)
         state.shouldFocus =true
+
+        console.log(sets[num].name)
+
+        state.activeMeshName = sets[num].name
+
+        //state.activeMesh = obj.getObjectByName(sets[num].name)
+
+        //console.log(obj.getObjectByName(sets[num].name))
     }/**/
 
 return (

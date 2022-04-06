@@ -79,7 +79,12 @@ const App = ()=>{
         {/*<cameraHelper /*args={}/>*/}
         {/*<fog attach="fog" args={["white",1,10]}/>*/}
         {/*<directionalLight />*/}
-
+        <directionalLight position={[6,3,0]}
+        castShadow
+        shadow-mapSize-height={2**10}
+        shadow-mapSize-width={2**10}
+        shadow-radius={10}
+        intensity={2}/>
       </Canvas>
 
     </div>

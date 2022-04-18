@@ -8,11 +8,11 @@ const Cars = ()=>{
 
     return(
         <>
-            <Dragable >
-              <BoundingBox offset={[0,-0.4,0.8]} position={[4,2,0]} size={[3,2,6]} /*visible*/>
-                <Suspense /*What this does is that it waits for async to happen before rendering the component*/
+          <Suspense /*What this does is that it waits for async to happen before rendering the component*/
                   fallback={null} /*You need a fallback and you have set the fall back to something*/
                 >
+            <Dragable >
+              <BoundingBox offset={[0,-0.4,0.8]} position={[4,2,0]} size={[3,2,6]} /*visible*/>
                   
                   {/*****This can be placed in the box*******/}
                   {/*scale={active?1.5:1}
@@ -28,25 +28,31 @@ const Cars = ()=>{
                   
                   />
 
-                </Suspense>
               </BoundingBox>
             </Dragable>
           
           
           <Dragable>
             <BoundingBox offset={[0,-0.8,0.2]} position={[-4,2,0]} size={[3,2,7]}>
-              <Suspense 
-                fallback={null} 
-              >
+              
                 <Model 
                   path='/tesla_model_s/scene.gltf'/*Remember we are dealing with folders here so you have to use slashes at the beginning and slashes for sub folders */
                   scale={new Array(3).fill(0.013)} // or you could have done this [0.01,0.01,0.01]
                   
-                />
-
-              </Suspense>
-            </BoundingBox>  
+                  />
+                
+             
+            </BoundingBox> 
+            <group rotation={[0,Math.PI,0]} position={[0,0.0005,0]}>
+              <Model path='mech_drone/scene.gltf'
+              scale={new Array(3).fill(7)}
+              
+             />
+            </group>
+             
           </Dragable>
+          </Suspense>
+          
         </>
     )
 }

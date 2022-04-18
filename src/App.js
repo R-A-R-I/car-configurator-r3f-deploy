@@ -20,7 +20,8 @@ import BoundingBox from './BoundingBox';
 import Cars from './Cars';
 import CameraControls from './CameraControls';
 import CameraButtons from './CameraButtons';
-
+import Lights from './Lights';
+import Effects from './Effects';
 
 //const [cubeTexture] = useLoader(TextureLoader,['wood.jpg']) Remember react hooks cannot be used at the top level. But the ideas is that you would destructure to obtain multiple textures at once if you wanted
 
@@ -51,7 +52,18 @@ const App = ()=>{
       <CameraButtons/>
       
       {/***You got shadows to work by upgrading your package from the deprecated version*/}
-      <Canvas style={{ backgroundColor: 'black' }} camera={{ position: [7, 7, 7] }} shadows /*Boolean attribute by default sets to true. My theory is that it sets it after you */>
+      <Canvas style={{ backgroundColor: 'black' }} 
+      camera={{ position: [7, 7, 7] }} 
+      shadows /*Boolean attribute by default sets to true. My theory is that it sets it after you */
+      gl={{
+        powerPreference: "high-performance",
+        antialias: false,
+        stencil: false,
+        depth: false
+      }}/**/
+      
+      
+      >
         <axesHelper arg={[5]} />
         {/*Don't forget to added physics please, it is important step for use-cannon*/}
         <Physics>
@@ -63,9 +75,7 @@ const App = ()=>{
           
         </Physics>
 
-        <Bulb position={[-6, 3, 0]} />{/**/}
-        <Bulb position={[0, 3, 0]} />
-        <Bulb position={[6, 3, 0]} />
+        <Lights/>
 
         <Suspense fallback={null}>
             <Background />{/**/}
@@ -74,17 +84,8 @@ const App = ()=>{
         <CameraControls/>
 
         <Orbit />{/**/}
-        
-        <ambientLight intensity={0.2} />
-        {/*<cameraHelper /*args={}/>*/}
-        {/*<fog attach="fog" args={["white",1,10]}/>*/}
-        {/*<directionalLight />*/}
-        <directionalLight position={[6,3,0]}
-        castShadow
-        shadow-mapSize-height={2**10}
-        shadow-mapSize-width={2**10}
-        shadow-radius={10}
-        intensity={2}/>
+        <Effects/>
+       
       </Canvas>
 
     </div>

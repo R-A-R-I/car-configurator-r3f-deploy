@@ -8,7 +8,8 @@ import {TextureLoader} from 'three/src/loaders/TextureLoader'
 
 
 const Background = ()=>{
-    const skybox = useLoader(THREE.TextureLoader,'/autoshop.jpg')/*/sky.jpg*/
+    const skybox = useLoader(THREE.TextureLoader,
+      process.env.PUBLIC_URL + '/autoshop.jpg')/*/sky.jpg*/
     
     const {gl} = useThree()
     

@@ -6,7 +6,10 @@ import * as THREE from "three";
 
 const Model = props=>{
 
-const gltf = useLoader(GLTFLoader, props.path) // you are not using textures so do use a texture loader
+const gltf = useLoader(
+    GLTFLoader, 
+    process.env.PUBLIC_URL + props.path
+    ) // you are not using textures so do use a texture loader
 
 console.log(gltf)
 

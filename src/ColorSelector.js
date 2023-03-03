@@ -8,6 +8,7 @@ import {TextureLoader} from 'three/src/loaders/TextureLoader'
 import state from "./State";
 
 
+
 const ColorSelector = ()=>{
 
     const handleClick = (e)=>{
@@ -30,18 +31,18 @@ const ColorSelector = ()=>{
 
       
         <div style={{background:"blue",
-                      height: 50,
-                      width: 50
+                     height: 50,
+                     width: 50
                     }}
          onClick={handleClick}></div>
         <div style={{background:"yellow",
-                      height: 50,
-                      width: 50
+                     height: 50,
+                     width: 50
                     }}
          onClick={handleClick}></div>
         <div style={{background:"white",
-                    height: 50,
-                    width: 50
+                     height: 50,
+                     width: 50
                     }}
          onClick={handleClick}></div>
       </div>

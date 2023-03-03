@@ -10,8 +10,9 @@ const state ={
     cameraPos:[6,3,5],
     targetPos:[-6,3,5],/* this is to change the origin of the camera vector*/
     
-    shouldFocus:false
-
+    shouldFocus:false,
+    activeMesh:{},//made up
+    activeMeshName:""
 }
 
 export default state;

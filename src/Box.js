@@ -12,7 +12,10 @@ import {useBox} from '@react-three/cannon';
 const Box = props=>{
 
     const [ref,api] = useBox(()=>({mass:1,...props}))// this ref replaces old one
-    const cubeTexture = useLoader(THREE.TextureLoader,'/wood.jpg')//
+    const cubeTexture = useLoader(
+      THREE.TextureLoader,
+      process.env.PUBLIC_URL + '/wood.jpg'
+      )//
   
     //const ref = useRef()
 

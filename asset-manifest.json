@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/car-configurator-r3f-deploy/static/css/main.2dc20c40.chunk.css",
+    "main.js": "/car-configurator-r3f-deploy/static/js/main.02fe9d5d.chunk.js",
+    "main.js.map": "/car-configurator-r3f-deploy/static/js/main.02fe9d5d.chunk.js.map",
+    "runtime-main.js": "/car-configurator-r3f-deploy/static/js/runtime-main.a58e3633.js",
+    "runtime-main.js.map": "/car-configurator-r3f-deploy/static/js/runtime-main.a58e3633.js.map",
+    "static/js/2.45aef63c.chunk.js": "/car-configurator-r3f-deploy/static/js/2.45aef63c.chunk.js",
+    "static/js/2.45aef63c.chunk.js.map": "/car-configurator-r3f-deploy/static/js/2.45aef63c.chunk.js.map",
+    "static/js/3.f3ab2973.chunk.js": "/car-configurator-r3f-deploy/static/js/3.f3ab2973.chunk.js",
+    "static/js/3.f3ab2973.chunk.js.map": "/car-configurator-r3f-deploy/static/js/3.f3ab2973.chunk.js.map",
+    "index.html": "/car-configurator-r3f-deploy/index.html",
+    "static/css/main.2dc20c40.chunk.css.map": "/car-configurator-r3f-deploy/static/css/main.2dc20c40.chunk.css.map",
+    "static/js/2.45aef63c.chunk.js.LICENSE.txt": "/car-configurator-r3f-deploy/static/js/2.45aef63c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a58e3633.js",
+    "static/js/2.45aef63c.chunk.js",
+    "static/css/main.2dc20c40.chunk.css",
+    "static/js/main.02fe9d5d.chunk.js"
+  ]
+}
